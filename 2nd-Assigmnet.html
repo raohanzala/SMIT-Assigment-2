@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <script>
+
+
+        //Question No.1
+        let number = 8;
+        function print(a, b) {
+            return a + b;
+        }
+
+        console.log(print(number, 9))
+
+        //Question N0.2
+
+        let arr = [1, 2, 3, 4, 5]
+        function findVal() {
+            let searchNumber = +prompt("Enter the number to find in array")
+            for (i = 0; i < arr.length; i++) {
+                if (arr.includes(searchNumber)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+
+        console.log(findVal())
+
+
+
+        // Question No.3
+        function newParagraph(text) {
+            const para = document.createElement("p")
+            para.textContent = text;
+            const body = document.querySelector("body")
+            body.appendChild(para)
+        }
+
+        newParagraph("what is your name")
+
+        //Question No.4
+        function newListItem(text) {
+            const li = document.createElement("li")
+            li.textContent = text;
+            const unorderedlist = document.querySelector("body")
+            unorderedlist.appendChild(li)
+        }
+
+        newListItem("Apple")
+
+
+        //Question No.5
+        function changeBackgroundColor(element, color) {
+            element.style.backgroundColor = color;
+        }
+
+        const myElement = document.querySelector("p");
+    changeBackgroundColor(myElement, "red");
+
+    //Question No.6
+    function saveToLocalStorage(key, object) {
+  const json = JSON.stringify(object);
+  localStorage.setItem(key, json);
+}
+
+const myObject = { name: "Hanzala", age: 17 };
+saveToLocalStorage("My info", myObject);
+const json = localStorage.getItem("MY INfo");
+    </script>
+</body>
+
+</html>
